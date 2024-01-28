@@ -22,6 +22,7 @@ body {
     width: 60%;
     max-height: 50px;
     margin-top: 10%;
+    font-size: 0.8rem;
     border: 1px solid rgba(244, 247, 245, 0.3);
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.3);
@@ -35,7 +36,7 @@ body {
 .chat {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     height: 97vh;
     width: 80vw;
@@ -47,7 +48,10 @@ body {
 
 .output {
     width: 80%;
-    height: 200px;
+    text-align: center;
+    padding: 2vw;
+    margin-top: 2vh;
+    /* height: 200px; */
     /* box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); */
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.1);
@@ -149,8 +153,14 @@ select {
     cursor: pointer;
 }
 
-button:hover {
+.add-button:hover {
+    background-color: rgba(69, 160, 73, 0.3);
+
+}
+
+button:active {
     background-color: #45a049;
+    color: white;
 }
 
 #submitbutton {

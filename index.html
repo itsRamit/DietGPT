@@ -14,94 +14,123 @@
   <body>
     <div class="parent">
       <div class="options">
-        <button class="option-buttons" id="generate-diet-button">
+        <button
+          class="option-buttons"
+          id="generate-diet-button"
+          onclick="DietInputForm()"
+        >
           Generate Diet
         </button>
-        <button class="option-buttons" id="generate-recipe-button">
+        <button
+          class="option-buttons"
+          id="generate-recipe-button"
+          onclick="GenerateRecipeForm()"
+        >
           Generate Recipe
         </button>
-        <button class="option-buttons" id="generate-suggest-dish-button">
+        <button
+          class="option-buttons"
+          id="generate-suggest-dish-button"
+          onclick="GenerateDishForm()"
+        >
           Generate Dish from ingredients
         </button>
       </div>
       <div class="chat">
-        <div class="output">Hi</div>
+        <div class="output">Welcome!!</div>
         <div class="user-info">
-          <!-- <form>
-                <div class="inputbox">
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" name="age" required>
-                </div>
-        
-                <div class="inputbox">
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
-                </div>
-        
-                <div class="inputbox">
-                    <label for="weight">Weight (kg):</label>
-                    <input type="number" id="weight" name="weight" required>
-                </div>
-        
-               <div class="inputbox">
-                    <label for="height">Height (cm):</label>
-                    <input type="number" id="height" name="height" required>
-               </div>
-        
-                <div class="inputbox">
-                    <label for="activityLevel">Activity Level:</label>
-                    <select id="activityLevel" name="activityLevel" required>
-                        <option value="sedentary">Sedentary</option>
-                        <option value="lightlyActive">Lightly Active</option>
-                        <option value="moderatelyActive">Moderately Active</option>
-                        <option value="veryActive">Very Active</option>
-                    </select>
-                </div>
-        
-                <div class="inputbox">
-                    <label for="dietaryPreferences">Dietary Preferences:</label>
-                    <input type="text" id="dietaryPreferences" name="dietaryPreferences">
-                </div>
-        
-               <div class="inputbox">
+          <div id="Dietform">
+            <form>
+              <div class="inputbox">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required />
+              </div>
+
+              <div class="inputbox">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+
+              <div class="inputbox">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required />
+              </div>
+
+              <div class="inputbox">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" required />
+              </div>
+
+              <div class="inputbox">
+                <label for="activityLevel">Activity Level:</label>
+                <select id="activityLevel" name="activityLevel" required>
+                  <option value="sedentary">Sedentary</option>
+                  <option value="lightlyActive">Lightly Active</option>
+                  <option value="moderatelyActive">Moderately Active</option>
+                  <option value="veryActive">Very Active</option>
+                </select>
+              </div>
+
+              <div class="inputbox">
+                <label for="dietaryPreferences">Dietary Preferences:</label>
+                <input
+                  type="text"
+                  id="dietaryPreferences"
+                  name="dietaryPreferences"
+                />
+              </div>
+
+              <div class="inputbox">
                 <label for="healthGoals">Health Goals:</label>
-                <input type="text" id="healthGoals" name="healthGoals">
-               </div>
-        
-                <div class="inputbox" id = "submitbutton">
-                    <button class="btn" type="submit">Submit</button>
+                <input type="text" id="healthGoals" name="healthGoals" />
+              </div>
+
+              <div class="inputbox" id="submitbutton">
+                <button class="btn" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+
+          <div id="DishNameform">
+            <form>
+              <div class="inputbox" style="width: 100%">
+                <label for="age">Enter Name of the dish:</label>
+                <div class="input-container" style="margin: 0">
+                  <textarea
+                    id="userInput"
+                    placeholder="Type your message..."
+                  ></textarea>
+                  <button class="btn" onclick="sendMessage()">Send</button>
                 </div>
-            </form> -->
+              </div>
+            </form>
+          </div>
 
-          <!-- <form style="width: 100%;">
-                <div class="inputbox"  style="width: 100%;">
-                    <label for="age">Enter Name of the dish:</label>
-                    <div class="input-container" style="margin: 0;">
-                        <textarea id="userInput" placeholder="Type your message..."></textarea>
-                        <button class="btn" onclick="sendMessage()">Send</button>
-                    </div>
-                </div>
-            </form> -->
+          <div id="Ingredentsform">
+            <form>
+              <div class="inputbox" id="IngredentsFormBox">
+                <label for="Ingredents">Ingredents</label>
+                <input type="text" id="Ingredents" name="Ingredents" />
+              </div>
 
-          <!-- <form id="dynamicForm">
-            <div class="inputbox">
-              <label for="Ingredents">Ingredents</label>
-              <input type="text" id="Ingredents" name="Ingredents" />
-            </div>
+              <div class="inputbox" style="max-height: 80px">
+                <button
+                  class="add-button"
+                  type="button"
+                  onclick="addNewInput()"
+                >
+                  Add New
+                </button>
+              </div>
 
-            <div class="inputbox">
-              <button class="add-button" type="button" onclick="addNewInput()">
-                Add New
-              </button>
-            </div>
-
-            <div class="inputbox" id="submitbutton">
-              <button type="submit">Submit</button>
-            </div>
-          </form> -->
+              <div class="inputbox" id="submitbutton">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
         </div>
 
         <div class="input-container">
