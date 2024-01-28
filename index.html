@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <title>AI</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="parent">
-        <div class="options">
-            <button class="option-buttons" id = "generate-diet-button">Generate Diet</button>
-            <button class="option-buttons" id = "generate-recipe-button">Generate Recipe</button>
-            <button class="option-buttons" id = "generate-suggest-dish-button">Generate Dish from ingredients</button>
-        </div>                                 
-    <div class="chat">
+      <div class="options">
+        <button class="option-buttons" id="generate-diet-button">
+          Generate Diet
+        </button>
+        <button class="option-buttons" id="generate-recipe-button">
+          Generate Recipe
+        </button>
+        <button class="option-buttons" id="generate-suggest-dish-button">
+          Generate Dish from ingredients
+        </button>
+      </div>
+      <div class="chat">
+        <div class="output">Hi</div>
         <div class="user-info">
-            <!-- <form>
+          <!-- <form>
                 <div class="inputbox">
                     <label for="age">Age:</label>
                     <input type="number" id="age" name="age" required>
@@ -66,8 +76,7 @@
                 </div>
             </form> -->
 
-
-            <!-- <form style="width: 100%;">
+          <!-- <form style="width: 100%;">
                 <div class="inputbox"  style="width: 100%;">
                     <label for="age">Enter Name of the dish:</label>
                     <div class="input-container" style="margin: 0;">
@@ -77,31 +86,33 @@
                 </div>
             </form> -->
 
+          <!-- <form id="dynamicForm">
+            <div class="inputbox">
+              <label for="Ingredents">Ingredents</label>
+              <input type="text" id="Ingredents" name="Ingredents" />
+            </div>
 
-            <form id="dynamicForm">
-                <div class="inputbox">
-                    <label for="Ingredents">Ingredents</label>
-                    <input type="text" id="Ingredents" name="Ingredents">
-                </div>
-                
-                <div class="inputbox">
-                    <button class="add-button" type="button" onclick="addNewInput()">Add New</button>
-                </div>
-                
-                <div class="inputbox" id="submitbutton">
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
-        
+            <div class="inputbox">
+              <button class="add-button" type="button" onclick="addNewInput()">
+                Add New
+              </button>
+            </div>
+
+            <div class="inputbox" id="submitbutton">
+              <button type="submit">Submit</button>
+            </div>
+          </form> -->
         </div>
 
-
-        <div class="input-container" >
-            <textarea id="userInput" placeholder="Type your message..."></textarea>
-            <button class="btn" onclick="sendMessage()">Send</button>
+        <div class="input-container">
+          <textarea
+            id="userInput"
+            placeholder="Type your message..."
+          ></textarea>
+          <button class="btn" onclick="generate()">Send</button>
         </div>
-
+      </div>
     </div>
-    </div>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
